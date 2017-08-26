@@ -1,0 +1,2 @@
+class Photobooth < ApplicationRecord
+end
