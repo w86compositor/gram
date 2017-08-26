@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/profile_page'
+  get 'users/profile'
 
   root 'home#index'
 
