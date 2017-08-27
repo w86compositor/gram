@@ -5,6 +5,7 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths.json
   def index
     @photobooths = Photobooth.all
+
   end
 
   # GET /photobooths/1
@@ -28,8 +29,8 @@ class PhotoboothsController < ApplicationController
 
     respond_to do |format|
       if @photobooth.save
-        format.html { redirect_to @photobooth, notice: 'Photobooth was successfully created.' }
-        format.json { render :show, status: :created, location: @photobooth }
+        format.html { redirect_to :controller => 'musicgenres', :action => 'jazz', notice: 'Photobooth was successfully created.' }
+        # format.json { render :show, status: :created, location: @photobooth }
       else
         format.html { render :new }
         format.json { render json: @photobooth.errors, status: :unprocessable_entity }
@@ -69,7 +70,7 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.require(:photobooth).permit(:file)
+      
     end
 end
 
