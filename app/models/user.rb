@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
    has_many :photobooths, inverse_of: :user
-  accepts_nested_attributes_for :photobooths
+  
 
 end
