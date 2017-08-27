@@ -10,9 +10,6 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths/1
   # GET /photobooths/1.json
   def show
-    send_data(@photobooth.file_contents,
-      type: @photobooth.content_type,
-      filename: @photobooth.filename)
   end
 
   # GET /photobooths/new
