@@ -10,6 +10,9 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths/1
   # GET /photobooths/1.json
   def show
+    send_data(@photobooth.file_contents,
+      type: @photobooth.content_type,
+      filename: @photobooth.filename)
   end
 
   # GET /photobooths/new
@@ -69,6 +72,7 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.fetch(:photobooth, {})
+      params.require(:photobooth).permit(:file)
     end
 end
+
