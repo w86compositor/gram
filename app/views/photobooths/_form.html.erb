@@ -1,0 +1,17 @@
+<%= form_with(model: photobooth, local: true) do |form| %>
+  <% if photobooth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(photobooth.errors.count, "error") %> prohibited this photobooth from being saved:</h2>
+
+      <ul>
+      <% photobooth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
