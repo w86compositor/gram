@@ -1,7 +1,6 @@
 class Photobooth < ApplicationRecord
   belongs_to :user
-  # validates_presence_of :user
-  
+  validates_presence_of :user
 
       def initialize(params = {})
         # File is now an instance variable so it can be
