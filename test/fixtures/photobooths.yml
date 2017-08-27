@@ -4,8 +4,10 @@ one:
   filename: MyString
   content_type: MyString
   file_content: 
+  user: one
 
 two:
   filename: MyString
   content_type: MyString
   file_content: 
+  user: two
