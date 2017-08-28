@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<h1>This is the Photoboooth Show Page</h1>
+
+<%= image_tag @photobooth.image.url(:medium) %> <br>
+
 <%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
 <%= link_to 'Back', photobooths_path %> <br>
 

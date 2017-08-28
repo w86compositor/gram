@@ -1,4 +1,4 @@
-<%= form_for(@photobooth) do |f| %>
+<%= form_for @photobooth, url: photobooths_path, html: { multipart: true } do |f| %>
   <% if @photobooth.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@photobooth.errors.count, "error") %> prohibited this photobooth from being saved:</h2>
@@ -11,9 +11,13 @@
     </div>
   <% end %>
 
+
+
   <div class="field">
-    <%= f.file_field :file %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
