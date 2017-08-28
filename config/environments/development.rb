@@ -55,12 +55,12 @@ Rails.application.configure do
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
   config.paperclip_defaults = {
-  storage: :s3,
-  s3_credentials: {
-    bucket: ENV.fetch('grammusic'),
-    access_key_id: ENV.fetch('AKIAJK4BHDTRTLN2VYIA'),
-    secret_access_key: ENV.fetch('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'),
-    s3_region: ENV.fetch('US East(N. Virginia)'),
-  }
-}
+        storage: :s3,
+        s3_credentials: {
+          bucket: ENV['S3_BUCKET_NAME'],
+          access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+          s3_region: ENV['S3_REGION']
+        }
+    }
 end
