@@ -1,4 +1,4 @@
-class Photobooth < ApplicationRecord
+class Photobooth < ApplicationRecord[5.1]
   belongs_to :user,  optional: true
   #validates_presence_of :user
 
