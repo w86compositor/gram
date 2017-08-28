@@ -6,5 +6,4 @@ class User < ApplicationRecord
 
    has_many :photobooths, inverse_of: :user
   
-
 end

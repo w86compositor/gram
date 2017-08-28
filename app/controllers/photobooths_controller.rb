@@ -24,12 +24,12 @@ class PhotoboothsController < ApplicationController
   # POST /photobooths
   # POST /photobooths.json
   def create
-    @photobooth = Photobooth.new(photobooth_params)
+    @photobooth = Photobooth.create(photobooth_params)
 
     respond_to do |format|
       if @photobooth.save
-        format.html { redirect_to @photobooth, notice: 'Photobooth was successfully created.' }
-        format.json { render :show, status: :created, location: @photobooth }
+        format.html { redirect_to musicgenres_path, notice: 'Photobooth was successfully created.' }
+        format.json { render :show, status: :created, location: users_profile_path }
       else
         format.html { render :new }
         format.json { render json: @photobooth.errors, status: :unprocessable_entity }
@@ -69,7 +69,6 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.require(:photobooth).permit(:file)
+      params.require(:photobooth).permit(:image)
     end
 end
-
