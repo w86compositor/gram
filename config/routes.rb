@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
  
+authenticated :user do
+    root to: 'users#profile', as: :authenticated_root
+  end
 
- root 'home#index'
+  root 'home#index'
 
   devise_for :users
   resources :photobooths
