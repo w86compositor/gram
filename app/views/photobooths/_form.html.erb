@@ -1,5 +1,4 @@
 <%= form_for @photobooth, url: photobooths_path, html: { multipart: true } do |f| %>
-  <%= f.file_field :image %>
   <% if @photobooth.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@photobooth.errors.count, "error") %> prohibited this photobooth from being saved:</h2>
