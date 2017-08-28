@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   get 'musicgenres/index' => "musicgenres#index", as: :musicgenres
 
-authenticated :user do
+  get 'timeline/index'
+
+
+  authenticated :user do
     root to: 'users#profile', as: :authenticated_root
   end
 
@@ -19,9 +22,6 @@ authenticated :user do
   get 'users/profiles'
 
   get 'musicgenres/:id' => "musicgenres#show"
-
-
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
