@@ -24,12 +24,12 @@ class PhotoboothsController < ApplicationController
   # POST /photobooths
   # POST /photobooths.json
   def create
-    @photobooth = Photobooth.new(photobooth_params)
+    @photobooth = Photobooth.create(photobooth_params)
 
     respond_to do |format|
       if @photobooth.save
-        format.html { redirect_to @photobooth, notice: 'Photobooth was successfully created.' }
-        format.json { render :show, status: :created, location: @photobooth }
+        format.html { redirect_to users_profile_path, notice: 'Photobooth was successfully created.' }
+        format.json { render :show, status: :created, location: users_profile_path }
       else
         format.html { render :new }
         format.json { render json: @photobooth.errors, status: :unprocessable_entity }
