@@ -1,5 +1,5 @@
 class MusicgenresController < ApplicationController
-	
+
 	def index
 		@photobooth = Photobooth.all
 	end

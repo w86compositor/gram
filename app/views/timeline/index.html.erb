@@ -1,1 +1,6 @@
 <h1>This is the Timeline view, where you see all the posts from all users, also your post too!</h1>
+<%= @all_pics %>
+
+<% @all_pics.each do |user| %>
+  <%= user.photobooths.last.image %>
+<% end %>
