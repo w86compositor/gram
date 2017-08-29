@@ -70,6 +70,7 @@ class PhotoboothsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to photobooths_url, notice: 'Photobooth was successfully destroyed.' }
       format.json { head :no_content }
+      redirect_to authenticated_root_path(@photobooth)
     end
   end
 
