@@ -10,6 +10,15 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths/1
   # GET /photobooths/1.json
   def show
+    @is_genres = params[:genres].present?
+    if @is_genres 
+      begin
+        @genre = GENRES[params[:genres].to_sym].sample
+      rescue
+        @genre_error = "DUDE PROVIDE A VALID ANSWER!"
+      end
+    end
+    @genres = ["latin", "jazz", "rock", "blues"]
   end
 
   # GET /photobooths/new
@@ -28,7 +37,8 @@ class PhotoboothsController < ApplicationController
 
     respond_to do |format|
       if @photobooth.save
-        format.html { redirect_to musicgenres_path, notice: 'Photobooth was successfully created.' }
+        
+        format.html { redirect_to photobooth_path(@photobooth), notice: 'Photobooth was successfully created.' }
         format.json { render :show, status: :created, location: users_profile_path }
       else
         format.html { render :new }
@@ -36,6 +46,8 @@ class PhotoboothsController < ApplicationController
       end
     end
   end
+
+
 
   # PATCH/PUT /photobooths/1
   # PATCH/PUT /photobooths/1.json
@@ -69,6 +81,6 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.require(:photobooth).permit(:image)
+      params.require(:photobooth).permit(:image, :song_url)
     end
 end

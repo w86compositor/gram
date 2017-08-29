@@ -53,6 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   Paperclip.options[:command_path] = "/usr/local/bin/"
+
   config.paperclip_defaults = {
         storage: :s3,
         s3_credentials: {
@@ -62,5 +63,4 @@ Rails.application.configure do
           s3_region: ENV['S3_REGION']
         }
     }
-
 end

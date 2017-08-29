@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
 
   authenticated :user do
-    root to: 'users#profile', as: :authenticated_root
+
+      root to: 'users#profile', as: :authenticated_root
   end
 
   root 'home#index'
@@ -16,12 +17,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :photobooths do
-    resources :musicgenres
   end
-
-  get 'users/profiles'
+  resources :musicgenres, only: [:index]
 
   get 'musicgenres/:id' => "musicgenres#show"
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
