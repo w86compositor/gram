@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # The users that are not authenticated will be redirected to home index, DO NOT CHANGE THE LINE OF CODE BELOW
   root 'home#index'
 
+get 'users/profile'
 
 resources :photobooths
 resources :musicgenres, only: [:index]
@@ -16,8 +17,8 @@ resources :musicgenres, only: [:index]
   get 'social/index'
   get 'timeline/index'
 
-  post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
-  get 'musicgenres/:id' => "musicgenres#show"
+  # post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
+  # get 'musicgenres/:id' => "musicgenres#show"
  
 
 end
