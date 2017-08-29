@@ -1,23 +1,24 @@
 Rails.application.routes.draw do
- 
+
   get 'social/index'
+
+  post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
 
   get 'timeline/index'
 
-authenticated :user do
-    root to: 'users#profile', as: :authenticated_root
+
+  authenticated :user do
+
+      root to: 'users#profile', as: :authenticated_root
   end
 
   root 'home#index'
 
   devise_for :users
-  resources :photobooths
 
-  get 'users/profile'
+  resources :photobooths do
+  end
+  resources :musicgenres, only: [:index]
 
- 
-
-  
-	
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'musicgenres/:id' => "musicgenres#show"
 end

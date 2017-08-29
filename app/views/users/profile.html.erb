@@ -1,7 +1,7 @@
 <h1>USER PROFILE PAGE</h1> <br>
 
 	<% @photobooths.each do |photobooth| %>
-		<%= image_tag photobooth.image.url(:medium) %> <br>
+		<%= image_tag photobooth.image.url %> <br>
 	<% end %>
 
 <%= link_to 'New Photobooth', new_photobooth_path %> <br>

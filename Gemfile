@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rmagick', '~> 2.16.0'
 gem "paperclip"
 gem 'aws-sdk'
 gem 'devise'
@@ -12,6 +13,7 @@ gem 'devise'
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem "dotenv-rails"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
