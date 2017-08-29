@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'social/index'
 
-  get 'musicgenres/index' => "musicgenres#index", as: :musicgenres
+  post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
 
   get 'timeline/index'
 

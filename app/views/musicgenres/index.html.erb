@@ -5,4 +5,9 @@
 
 <h3>There should be a button here that should take you to the Sharing page</h3>
 
-<%= image_tag @photobooth.image.url %>
+<h2>Display the picture</h2>
+<%= button_to "Post", action: "index" %>
+<h2>Share button here</h2>
+<%= button_to "Share", action: "new" %>
+
+<%= image_tag @photobooth.image.url(:medium) %>
