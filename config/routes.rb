@@ -20,7 +20,5 @@ Rails.application.routes.draw do
   end
   resources :musicgenres, only: [:index]
 
-  get 'users/profiles'
-
   get 'musicgenres/:id' => "musicgenres#show"
 end
