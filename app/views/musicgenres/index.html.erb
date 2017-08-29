@@ -8,6 +8,6 @@
 <h2>Display the picture</h2>
 <%= button_to "Post", action: "index" %>
 <h2>Share button here</h2>
-<%= button_to "Share", action: "new" %>
+<%= button_to "Share", render :template => "social/index"%>
 
 <%= image_tag @photobooth.image.url(:medium) %>
