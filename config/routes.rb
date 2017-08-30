@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 # The users that are authenticated will be redirected to users profile after sign in, DO NOT CHANGE THE LINE OF CODE BELOW
   authenticated :user do
-     redirect 'users#profile', as: :authenticated_root
+     root to: 'users#profile', as: :authenticated_root
   end
   # The users that are not authenticated will be redirected to home index, DO NOT CHANGE THE LINE OF CODE BELOW
   root 'home#index'
@@ -15,6 +15,7 @@ resources :musicgenres
 
   get 'social/index'
   get 'timeline/index'
+  get 'musicgenres/index'
 
 
 
