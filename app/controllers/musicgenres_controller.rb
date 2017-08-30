@@ -1,7 +1,8 @@
 class MusicgenresController < ApplicationController
 
 	def index
-		@photobooth = Photobooth.all
+	end
+	def create
 	end
 
 	def show

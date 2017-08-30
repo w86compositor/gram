@@ -6,20 +6,22 @@
 
 
 <% if @is_genres %>
-	<%=  @genre %>	
+	<%=  @genre %>
 	<% if @genre_error.present? %>
 	<%=  @genre_error %>
 	<% end %>
 <% else %>
 	<% @genres.each do |g| %>
 		<%= link_to g, photobooth_path(@photobooth, genres: g) %>
-	<% end %>	
+	<% end %>
 <% end %>
 
 <br>
 <%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
 <%= link_to 'Back', photobooth_path(@photobooth) %> |
 <%= link_to 'Destroy', photobooth_path(@photobooth) %> |
-<%= link_to 'User Profile', authenticated_root_path %>
+<%= link_to 'User Profile', authenticated_root_path %> |
+<%= button_to 'Social', social_index_path, method: :get%> |
+
 
 <%#= link_to 'Home Page', users_profile_path %>
