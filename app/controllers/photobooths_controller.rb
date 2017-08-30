@@ -11,14 +11,12 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths/1.json
   def show
     @is_genres = params[:genres].present?
-    if @is_genres 
-      begin
-        @genre = GENRES[params[:genres].to_sym].sample
-      rescue
-        @genre_error = "DUDE PROVIDE A VALID ANSWER!"
+    if @is_genres
+      if GENRES.keys.include? params[:genres].to_sym
+          @genre = GENRES[params[:genres].to_sym].sample
       end
     end
-    @genres = ["latin", "jazz", "rock", "blues"]
+    @genres = ["rock", "jazz", "pop", "country", "latin", "hip_hop", "classic", "contemporary", "electronic_dance", "rb", "soul"]
   end
 
   # GET /photobooths/new
