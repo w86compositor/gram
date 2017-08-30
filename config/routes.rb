@@ -12,10 +12,12 @@ Rails.application.routes.draw do
 get 'users/profile'
 
 resources :photobooths
-resources :musicgenres, only: [:index]
+resources :musicgenres
 
   get 'social/index'
   get 'timeline/index'
+
+
 
   # post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
   # get 'musicgenres/:id' => "musicgenres#show"

@@ -63,9 +63,7 @@ p{
 <h3>There should be a button here that should take you to the Sharing page</h3>
 
 <h2>Display the picture</h2>
-<%= button_to "Post", action: "index" %>
+<%= button_to "Post", timeline_index_path, method: :get %>
 <h2>Share button here</h2>
-<%= button_to "Share", action: "new" %>
 
-
-<%= image_tag @photobooth.image.url %>
+ <%= button_to "Share", social_index_path, method: :get %>
