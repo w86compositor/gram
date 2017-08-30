@@ -4,9 +4,12 @@
 
 <%= image_tag @photobooth.image.url(:medium) %> <br>
 
-
+<!-- Do not change this CODE, I repeat, DO NOT CHANGE THIS CODE -->
 <% if @is_genres %>
-	<%=  @genre %>
+<audio controls>
+  <source src="<%= @genre[:url] %>" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
 	<% if @genre_error.present? %>
 	<%=  @genre_error %>
 	<% end %>
@@ -14,9 +17,9 @@
 	<% @genres.each do |g| %>
 		<%= link_to g, photobooth_path(@photobooth, genres: g) %>
 	<% end %>
-<% end %>
+<% end %> <br>
 
-<br>
+
 <%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
 <%= link_to 'Back', photobooth_path(@photobooth) %> |
 <%= link_to 'Destroy', photobooth_path(@photobooth) %> |
