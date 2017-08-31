@@ -54,13 +54,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Paperclip.options[:command_path] = "/usr/local/bin/"
 
-  # config.paperclip_defaults = {
-  #       storage: :s3,
-  #       s3_region: 'us-east-1',
-  #       bucket: ENV['S3_BUCKET_NAME']||'',
-  #       s3_credentials: {
-  #         access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-  #         secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-  #       }
-  #   }
+  config.paperclip_defaults = {
+        storage: :s3,
+        s3_region: 'us-east-1',
+        bucket: ENV['S3_BUCKET_NAME']||'',
+        s3_credentials: {
+          access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        }
+    }
 end

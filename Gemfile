@@ -9,7 +9,6 @@ end
 gem 'bootstrap'
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'rmagick', '~> 2.16.0'
 gem "paperclip"
 gem 'aws-sdk'
 gem 'devise'
