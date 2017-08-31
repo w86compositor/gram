@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<style >
+.link{
+  text-decoration: underline;
+}
+body{
+  background-image: url("http://hungryforchange.tv/images/happypeople.jpg");
+}
+
+</style>
 <html lang="en">
 <head>
   <title>Homepage</title>
@@ -17,20 +26,26 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="https://thumbs.dreamstime.com/z/smiling-faces-portraits-men-women-laughing-33131857.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="https://i.pinimg.com/736x/46/fd/c1/46fdc1df8272a4120cd5b08b656dfa25--funny-face-pics-funny-baby-faces.jpg" alt="Los Angeles">
       </div>
 
       <div class="item">
-        <img src="http://4.bp.blogspot.com/_GyWDmsRqo3E/SDcmUDqeeFI/AAAAAAAAACI/LU0xtLnWr9w/s400/Monthly+Special+Grid.jpg" alt="Chicago" style="width:100%;">
+        <img src="http://deskbg.com/s3/wpp/3/3241/big-smile-jessica-alba-desktop-background.jpg" alt="Chicago" >
       </div>
 
       <div class="item">
-        <img src="http://media.istockphoto.com/photos/baby-faces-happy-picture-id183368170" alt="New york" style="width:100%;">
+        <img src="http://cache.lovethispic.com/uploaded_images/blogs/10-Funny-Monday-Morning-Faces-6121-7.jpg" alt="New york">
+      </div>
+
+      <div class="item">
+        <img src="https://in.bookmyshow.com/entertainment/wp-content/uploads/maxresdefault%20(1)(4).jpg" alt="New york">
       </div>
     </div>
 
@@ -54,4 +69,4 @@
 </html>
 
 
-<%= link_to 'Log Out', destroy_user_session_path %>
+<%= link_to 'Log Out', destroy_user_session_path, class:"link" %>
