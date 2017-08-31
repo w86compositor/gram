@@ -80,6 +80,6 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.require(:photobooth).permit(:image, :song_url)
+      params.require(:photobooth).permit(:image)
     end
 end
