@@ -1,8 +1,32 @@
-<h1>USER PROFILE PAGE</h1> <br>
+<!-- <h1>USER PROFILE PAGE</h1> <br> -->
+<nav class="navbar">
+      <span class="h1 mx-auto" class="navbar-brand mb-0">Profile</span>
+</nav>
 
-	<% @photobooths.each do |photobooth| %>
-		<%= image_tag photobooth.image.url %> <br>
-	<% end %>
-<%= link_to 'New Photobooth', new_photobooth_path %> <br>
-<%= link_to 'Log Out', destroy_user_session_path %>
-<%= @user  %>
+<div class="container mt-5" style="height: 103px;">
+  <div class="row align-items-center">
+    <div class="col-sm-4">
+      <%= image_tag('person.png', class: 'float-left') %>
+    </div>
+    <div class="d-flex justify-content-center col-sm-4"><p>Jeremy Scott</p></div>
+    <div class="class-sm-4"><i class=" float-right fa fa-cog fa-2x" aria-hidden="true"></i></div>
+
+  </div>
+</div>
+
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<% @photobooths.each do |photobooth| %>
+			<div class="col-md-4 p-0">
+					<%= image_tag photobooth.image.url, class: 'img-fluid' %>
+			</div>
+		<% end %>	
+	</div>
+		<%= link_to 'New Photobooth', new_photobooth_path %> <br>
+		<%= link_to 'Log Out', destroy_user_session_path %>
+		<%= @user  %>
+</div>
+
+<nav class="navbar navbar-bottom bg-primary">
+    <%= image_tag('photo-button.png', style: "margin: -56px auto 0 auto") %>
+</nav>
