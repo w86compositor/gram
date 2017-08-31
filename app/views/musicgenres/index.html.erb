@@ -1,3 +1,67 @@
+<style>
+body{
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/10/03/21/piano-2617645_960_720.jpg");
+}
+  #fa{
+    text-align: center;
+    color: lightgreen;
+    font-size: 2em;
+  }
+  h1{
+    text-align: center;
+  }
+  .button {
+    background-color: #339999;
+    border: none;
+    border-radius: 45%;
+    color: white;
+    padding: 15px 33px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+p{
+  font-size: 2em;
+  text-align: center;
+}
+</style>
+<body>
+
+<p id="fa"><i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
+</p>
+<h1>DONE!</h1>
+<!-- add a picture beteween the donr and the music genre title -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><p>Select A Genre</p></div>
+
+      <%= link_to 'Latin', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Rock', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Country', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Blues', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Pop', new_music_genre_path, class: 'button' %>
+      <%= link_to 'HipHop', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Indie', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Soul', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Electronic', new_music_genre_path, class: 'button' %>
+      <%= link_to 'R&B', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Classical', new_music_genre_path, class: 'button' %>
+      <%= link_to 'Contemporary', new_music_genre_path, class: 'button' %>
+    </div>
+  </div>
+</div>
+
+
 <h1>This is the Music Genres Page</h1> <br>
 <p>You should see this page after the user has taken the picture</p> <br>
 
@@ -7,4 +71,5 @@
 <h2>Display the picture</h2>
 <%= button_to "Post", timeline_index_path, method: :get %>
 <h2>Share button here</h2>
+
  <%= button_to "Share", social_index_path, method: :get %>

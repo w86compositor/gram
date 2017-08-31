@@ -5,9 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 gem 'bootstrap'
 gem "font-awesome-rails"
 gem 'jquery-rails'
+=======
+gem 'rmagick', '~> 2.16.0'
+>>>>>>> ecd07f574f12700b6c3b217730acd19a7e52ce04
 gem "paperclip"
 gem 'aws-sdk'
 gem 'devise'
