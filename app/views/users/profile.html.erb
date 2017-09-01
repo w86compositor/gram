@@ -1,8 +1,48 @@
-<h1>USER PROFILE PAGE</h1> <br>
+<!-- <h1>USER PROFILE PAGE</h1> <br> -->
 
-	<% @photobooths.each do |photobooth| %>
-		<%= image_tag photobooth.image.url %> <br>
-	<% end %>
-<%= link_to 'New Photobooth', new_photobooth_path %> <br>
-<%= link_to 'Log Out', destroy_user_session_path %>
-<%= @user  %>
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand text">
+  		<%= image_tag('gram-logo.svg', style: 'width: 60px; height: 60px;') %>
+  	</a>
+</nav>
+
+<div class="container">
+	<div class="d-flex justify-content-center">
+		<span class="h1" class="navbar-brand mb-0">Profile</span>
+	</div>
+	<div class="d-flex justify-content-center">
+		<i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+	</div>
+</div>
+
+<div class="container mt-5" style="height: 103px;">
+	<div class="row justify-content-center">
+	    <div class="card">
+	  		<%= image_tag('profile-picture.jpg', class: 'img-fluid', style: 'height:320px; padding:12px;') %>
+	  		<div class="card-body text-center">
+	  			<h4>Jeremy&nbsp;Scott</h4>
+	  		</div>
+		</div>
+	</div>
+</div>
+
+<div class="container p-0" style="margin: 23rem auto 3rem auto;">
+	<div class="row">
+		<% @photobooths.each do |photobooth| %>
+			<div class="col-6 col-sm-6 col-md-6 p-0">
+				<%= image_tag photobooth.image.url, class: 'img-fluid sm-4' %>
+			</div>
+		<% end %>	
+	</div>
+</div>
+
+<div class="container-fluid text-center" style="margin-top: 10px; background-color: #FBD0C9">
+	<h3>Ready for your <br> next challenge?</h3>
+	<%= link_to 'New Photobooth', new_photobooth_path, class: 'btn btn-primary' %> <br><br>
+	<%= link_to 'Log Out', destroy_user_session_path, class: 'btn btn-danger' %> <br><br>
+</div>
+
+
+<!-- <nav class="navbar navbar-bottom bg-primary">
+    <%# image_tag('photo-button.png', style: "margin: -56px auto 0 auto") %>
+</nav> -->
