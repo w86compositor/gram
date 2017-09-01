@@ -71,5 +71,9 @@ p{
 <h2>Display the picture</h2>
 <%= button_to "Post", timeline_index_path, method: :get %>
 <h2>Share button here</h2>
+<%= button_to "Share", render :template => "social/index"%>
+
+
+<%= image_tag @photobooth.image.url %>
 
  <%= button_to "Share", social_index_path, method: :get %>

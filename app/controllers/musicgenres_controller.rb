@@ -7,5 +7,6 @@ class MusicgenresController < ApplicationController
 
 	def show
 		@photobooth = Photobooth.find(params[:id])
-	end
+  end
+
 end

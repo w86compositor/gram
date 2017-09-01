@@ -19,11 +19,6 @@
 
 /node_modules
 /yarn-error.log
-/.env
-.env
-/.env
 /public/*
 .byebug_history
-
-# Ignore encrypted secrets key file.
-config/secrets.yml.key
+.env
