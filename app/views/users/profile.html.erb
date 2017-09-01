@@ -1,8 +1,8 @@
 <!-- <h1>USER PROFILE PAGE</h1> <br> -->
 
-<nav class="navbar">
+<nav class="navbar navbar-dark bg-dark">
 	<a class="navbar-brand text">
-  		<%= image_tag('gram-logo-2.svg', style: 'width: 220px; height: 220px;') %>
+  		<%= image_tag('gram-logo.svg', style: 'width: 60px; height: 60px;') %>
   	</a>
 </nav>
 
@@ -16,11 +16,13 @@
 </div>
 
 <div class="container mt-5" style="height: 103px;">
-    <div class="card col-md-7 mx-auto">
-  		<%= image_tag('profile-picture.jpg', class: 'img-fluid', style: 'height:320px; padding:12px;') %>
-  		<div class="card-body text-center">
-  			<h4>Jeremy&nbsp;Scott</h4>
-  		</div>
+	<div class="row justify-content-center">
+	    <div class="card">
+	  		<%= image_tag('profile-picture.jpg', class: 'img-fluid', style: 'height:320px; padding:12px;') %>
+	  		<div class="card-body text-center">
+	  			<h4>Jeremy&nbsp;Scott</h4>
+	  		</div>
+		</div>
 	</div>
 </div>
 
@@ -39,12 +41,6 @@
 	<%= link_to 'New Photobooth', new_photobooth_path, class: 'btn btn-primary' %> <br><br>
 	<%= link_to 'Log Out', destroy_user_session_path, class: 'btn btn-danger' %> <br><br>
 </div>
-
-
-
-		
-		
-		<%# @user  %>
 
 
 <!-- <nav class="navbar navbar-bottom bg-primary">
