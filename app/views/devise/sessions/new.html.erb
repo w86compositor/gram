@@ -1,12 +1,11 @@
 <div class="girl">
-  <%= image_tag('logo.png') %>
-  <h2>Log in</h2>
 
-  <p>This is the Devise log in page</p>
+ <i><%= image_tag('gram-logo.svg', style: 'width: 100px; height: 100px;') %></i> <br><br>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ 
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <!-- <%= f.label :email %><br /> -->
+      <%# f.label %> 
       <%= f.email_field :email, autofocus: true, placeholder: raw("&#xf007") + " Username", style: "font-family: FontAwesome" %>
     </div>
 
@@ -25,8 +24,26 @@
         <%= f.label :remember_me %>
       </div>
     <% end -%>
+<% end %>
 
-  <% end %>
+
+<form>
+<div class="container justify-content-center">
+      <div class="form-group mb-0" style="padding: 0 220px 0 220px;">
+        <input type="email" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="just an icon">
+      </div>
+      <div class="form-group" style="padding: 0 220px 0 220px;">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Check me out
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
 
   <%= render "devise/shared/links" %>
 </div>
