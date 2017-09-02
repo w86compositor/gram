@@ -82,3 +82,11 @@ body {
   input:focus:-khtml-autofill {
       -khtml-box-shadow: 0 0 0px 1000px #fff inset;
   }
+
+
+.sameHeightImages img {
+	width: auto !important;
+	height: 1470px;
+	max-height: 1470px;
+}
+
