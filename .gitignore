@@ -21,6 +21,6 @@
 /yarn-error.log
 /.env
 .env
-/.env
+.DS_Store
 /public/*
 .byebug_history
