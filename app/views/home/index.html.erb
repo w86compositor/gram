@@ -1,11 +1,8 @@
 <style>
-body{
-  background-image: url("https://ak2.picdn.net/shutterstock/videos/14997529/thumb/1.jpg");
-  background-repeat:repeat;
-}
+
 nav .fa{
     font-size: 80px;
-    color:yellow;
+    color:red;
     width: 50px;
     height: 85px;*/
     text-align: center;
@@ -13,33 +10,41 @@ nav .fa{
   }
 </style>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide overlay" data-ride="carousel">
     <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
   </ol>
 
     <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c7959833281875.56a6c1098fafe.jpg")%>
+    <div class="carousel-item active sameHeightImages">
+      <%= image_tag('girl.jpg', class: 'd-block w-100') %>
       <div class="carousel-caption d-md-block">
-    <h3>Add Music</h3>
-  </div>
+        <h3>Express Yourself</h3>
+      </div>
     </div>
-    <div class="carousel-item">
-        <%= image_tag("https://4.bp.blogspot.com/-ckTY0kuy9Bs/Vz60lvOgHNI/AAAAAAACAtE/9NeXJzpTK1oKxL3vUEevn2t2BgkNMzbuQCKgB/s0/People_Admire_the_Landscapes_tb.jpg")%>
+    <div class="carousel-item sameHeightImages">
+        <%= image_tag("retro-selfie.jpg", class: 'd-block w-100') %>
         <div class="carousel-caption d-none d-md-block">
-    <h3>Share and Challenge</h3>
-  </div>
+          <h3>Challenge your friends</h3>
+        </div>
     </div>
-    <div class="carousel-item">
-        <%= image_tag("https://www.fillmurray.com/1600/1400")%>
+    <div class="carousel-item sameHeightImages">
+        <%= image_tag("balloon-girl.jpg", class: 'd-block w-100')%>
         <div class="carousel-caption d-none d-md-block">
-    <h3>Take great pictures</h3>
-  </div>
+          <h3>Take great pictures</h3>
+        </div>
+    </div>
+    <div class="carousel-item sameHeightImages">
+        <%= image_tag("headphones.jpg", class: 'd-block w-100')%>
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Choose your MUSIC</h3>
+        </div>
     </div>
   </div>
 
@@ -54,11 +59,8 @@ nav .fa{
   </a>
 </div>
 
-
-
-  <nav class="navbar navbar-light bg-danger">
-    <p><a href="http://localhost:3000/users/sign_in" class="text-warning">Log In</a></p>
-      <i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i>
-    <p><a href="http://localhost:3000/users/sign_up" class="text-warning">Sign Up</a></p>
-  </nav>
-  <a href="http://localhost:3000/users/sign_out">Log Out</a>
+<nav class="navbar navbar-dark sticky-bottom">
+  <p><a href="http://localhost:3000/users/sign_in" class="">Log In</a></p>
+    <i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i>
+  <p><a href="http://localhost:3000/users/sign_up" class="">Sign Up</a></p>
+</nav>

@@ -1,2 +1,11 @@
 @import "bootstrap";
 @import "font-awesome";
+
+
+.sameHeightImages img {
+	width: auto !important;
+	height: 1470px;
+	max-height: 1470px;
+}
+
+
