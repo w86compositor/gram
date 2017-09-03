@@ -3,93 +3,32 @@
 
 body {
 
-	background-color: #f8f9fa;
-}
-
-.girl{
-  background: url('background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  color: #fff;
-
-
-// .sign_up_png {
-//   height: auto;
-//   padding: 40px;
-//   margin: 0 auto;
-
-#user_email, #user_password, {
-      width: 240px;
-      height: 40px;
-      border-radius: 7px;
-      padding-left: 16px;
-      // height: 240px;
-      background-color: #ffffff;
-    }
-
-
-// .action {
-//   width:240px;
-//   height: 40px;
-// }
-
-
-#new_user{margin-top: 240px;
-
-    }
-    a {
-      color: #fff;
-    }
-    .links{
-      position: relative;
-      height: 50%;
-      left: 100px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    img {
-      height: auto;
-      width: 40%;
-      margin-top: 425px;
-    }
-
-  }
-
-  input:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:-moz-autofill {
-      -moz-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:-o-autofill {
-      -o-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:-khtml-autofill {
-      -khtml-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-
-  input:focus:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:focus:-moz-autofill {
-      -moz-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:focus:-o-autofill {
-      -o-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  input:focus:-khtml-autofill {
-      -khtml-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-
-
-.sameHeightImages img {
-	width: auto !important;
-	height: 1470px;
-	max-height: 1470px;
+	
+  background-color: #333333;
 }
 
 
+.girl {
 
+	background: url('background.png');
+	background-size: cover;
+	height: 1774px;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+
+sign-up {
+	position: relative;
+    top: 50%;
+    width: 650px;
+    height: 240px;
+    background-color: #ffffff;
+}
+
+
+sign-up-button input {
+	width: 650px;
+    height: 110px;
+    background-color: #ba77ff;
+}
