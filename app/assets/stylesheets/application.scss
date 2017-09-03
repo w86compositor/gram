@@ -1,2 +1,32 @@
 @import "bootstrap";
 @import "font-awesome";
+
+.button {
+  background-color: #3C6FB1;
+  border: none;
+  border-radius: 50%;
+  border-bottom-style: outset;
+  padding: 5px 11px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+}
+
+.buttonn{
+  background-color: #1B3D6A;
+  color: yellow;
+  padding: 5px 25px;
+  text-align: center;
+  display: inline-block;
+  font-family: Trebuchet;
+  font-size: 20px;
+  margin: 10px 146px;
+
+}
