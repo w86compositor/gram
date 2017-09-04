@@ -16,7 +16,7 @@ class PhotoboothsController < ApplicationController
           @genre = GENRES[params[:genres].to_sym].sample
       end
     end
-    @genres = ["rock", "jazz", "pop", "country", "latin", "hip_hop", "classic", "contemporary", "electronic_dance", "rb", "soul"]
+    @genres = ["rock", "jazz", "pop", "country", "latin", "hip_hop", "classic", "contemporary", "electronic_dance", "rb", "soul", "indie"]
   end
 
   # GET /photobooths/new

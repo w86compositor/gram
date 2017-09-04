@@ -2,6 +2,7 @@ class MusicgenresController < ApplicationController
 
 	def index
 	end
+	
 	def create
 	end
 
