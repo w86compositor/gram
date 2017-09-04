@@ -8,7 +8,7 @@
 
 <div class="container-fluid mt-5">
 	<div class="row justify-content-center">
-		<%= image_tag @photobooth.image.url %>
+		<%= image_tag @photobooth.image.url(:large) %>
 	</div>
 </div>
 
@@ -45,13 +45,36 @@
 
 <!-- DO NOT CHANGE THE CODE ABOVE, I REPEAT, DO NOT CHANGE THE CODE ABOVE THIS LINE-->
 
-<%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
-<%= link_to 'Back', photobooth_path(@photobooth) %> |
-<%= link_to 'Destroy', photobooth_path(@photobooth) %> |
-<%= link_to 'User Profile', authenticated_root_path %> |
-<%= button_to 'Post', timeline_index_path, method: :get%> |
-<%= button_to 'Social', social_index_path, method: :get%> |
+
+<nav class="navbar navbar-expand-md navbar-bottom text-center">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<div class="container-fluid d-flex justify-content-around">
+			<div class="row-md-4">
+				<%= link_to authenticated_root_path do %>
+							<i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
+							<h4>Profile</h4>
+				<% end %>
+			</div>
+			<div class="row-md-4">
+				<%= link_to timeline_index_path, method: :get do %>
+							<i class="fa fa-circle-o fa-5x" aria-hidden="true"></i>
+							<h4>Post</h4>
+				<% end %>
+			</div>
+			<div class="row-md-4">
+				<%= link_to social_index_path, method: :get do %>
+							<i class="fa fa-share-alt fa-5x" aria-hidden="true"></i>
+							<h4>Share</h4>
+						<% end %>
+			</div>
+		</div>
+	</div>  
+</nav>
 
 
 
-<%#= link_to 'Home Page', users_profile_path %>
+
