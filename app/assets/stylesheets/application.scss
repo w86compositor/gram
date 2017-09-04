@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+
+body {
+
+  background-color: #333333;
+}
+
+a {
+	color: #fefefe;
+}
+
+.girl {
+
+	background: url('background.png');
+	background-size: cover;
+	height: 1774px;
+	width: 100%;
+	background-repeat: no-repeat;
+}

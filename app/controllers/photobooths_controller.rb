@@ -11,14 +11,12 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths/1.json
   def show
     @is_genres = params[:genres].present?
-    if @is_genres 
-      begin
-        @genre = GENRES[params[:genres].to_sym].sample
-      rescue
-        @genre_error = "DUDE PROVIDE A VALID ANSWER!"
+    if @is_genres
+      if GENRES.keys.include? params[:genres].to_sym
+          @genre = GENRES[params[:genres].to_sym].sample
       end
     end
-    @genres = ["latin", "jazz", "rock", "blues"]
+    @genres = [{name:"country", image: 'triangle.svg'},{name: "Latin", image: 'harmonica.svg'},{name:"hip-hop", image: 'keyboard.svg'},{name:"pop", image: 'drum-set.svg'},{name:"jazz", image: 'saxophone.svg'},{name:"rock", image: 'electric-guitar.svg'},{name:"classic", image: 'flute.svg'},{name:"contemporary", image: 'key-contemporary.svg'},{name:"electronic_dance", image: 'saxophone.svg'},{name:"rb", image: 'keyboard.svg'},{name:"soul", image: 'french-horn.svg'},{name:"indie", image: 'drum-set.svg'}]
   end
 
   # GET /photobooths/new
@@ -34,7 +32,7 @@ class PhotoboothsController < ApplicationController
   # POST /photobooths.json
   def create
     @photobooth = Photobooth.create(photobooth_params)
-
+    
     respond_to do |format|
       if @photobooth.save
         
@@ -68,7 +66,7 @@ class PhotoboothsController < ApplicationController
   def destroy
     @photobooth.destroy
     respond_to do |format|
-      format.html { redirect_to photobooths_url, notice: 'Photobooth was successfully destroyed.' }
+      format.html { redirect_to authenticated_root_path(@photobooth), notice: 'Photobooth was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -81,6 +79,6 @@ class PhotoboothsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photobooth_params
-      params.require(:photobooth).permit(:image, :song_url)
+      params.require(:photobooth).permit(:image, :image_challenge_type)
     end
 end

@@ -1,24 +1,26 @@
 Rails.application.routes.draw do
-
-  get 'social/index'
-
-  post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
-
-  get 'timeline/index'
-
-
-  authenticated :user do
-
-      root to: 'users#profile', as: :authenticated_root
-  end
-
-  root 'home#index'
-
   devise_for :users
 
-  resources :photobooths do
+# The users that are authenticated will be redirected to users profile after sign in, DO NOT CHANGE THE LINE OF CODE BELOW
+  authenticated :user do
+     root to: 'users#profile', as: :authenticated_root
   end
-  resources :musicgenres, only: [:index]
+  # The users that are not authenticated will be redirected to home index, DO NOT CHANGE THE LINE OF CODE BELOW
+  root 'home#index'
 
-  get 'musicgenres/:id' => "musicgenres#show"
+get 'users/profile'
+
+resources :photobooths
+resources :musicgenres
+
+  get 'social/index'
+  get 'timeline/index'
+  get 'musicgenres/index'
+
+
+
+  # post 'musicgenres/index' => "musicgenres#index", as: :musicgenres
+  # get 'musicgenres/:id' => "musicgenres#show"
+
+
 end

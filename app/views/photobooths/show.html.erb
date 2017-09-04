@@ -1,24 +1,80 @@
-<p id="notice"><%= notice %></p>
+<style>
+	body {
+		color: #fefefe;
+	}
+</style>
 
-<h1>This is supposed to be the Music Genre Page</h1>
+<!-- <p id="notice"><%# notice %></p -->
 
-<%= image_tag @photobooth.image.url(:medium) %> <br>
+<div class="container-fluid mt-5">
+	<div class="row justify-content-center">
+		<%= image_tag @photobooth.image.url(:large) %>
+	</div>
+</div>
 
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<h1>Select the Music Genre</h1>	
+	</div>
+</div>
 
+<!-- DO NOT CHANGE THE CODE BELOW, I REPEAT, DO NOT CHANGE THE CODE BELOW THIS LINE-->
 <% if @is_genres %>
-	<%=  @genre %>	
-	<% if @genre_error.present? %>
-	<%=  @genre_error %>
-	<% end %>
-<% else %>
-	<% @genres.each do |g| %>
-		<%= link_to g, photobooth_path(@photobooth, genres: g) %>
-	<% end %>	
+	<audio controls>
+  	<source src="<%= @genre[:url] %>" type="audio/mpeg">
+  	Your browser does not support the audio tag.
+	</audio>
+		<% if @genre_error.present? %>
+			<%=  @genre_error %>
+		<% end %>
+	<% else %>
+
+	<div class="container-fluid mt-5 mb-5">
+		<div class="row text-center">
+			<% @genres.each do |g| %>
+				<div class="col-md-4">
+					<%= link_to photobooth_path(@photobooth, genres: g[:name]) do %>
+						<%= image_tag(g[:image], style: 'height: 140px; width: 140px;') %>
+						<h4 class="mt-5"><%=  g[:name] %></h4>
+					<% end %>		
+				</div>
+			<% end %>
+		</div>
+	</div>
 <% end %>
 
-<br>
-<%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
-<%= link_to 'Back', photobooth_path(@photobooth) %> |
-<%= link_to 'User Profile', authenticated_root_path %>
+<!-- DO NOT CHANGE THE CODE ABOVE, I REPEAT, DO NOT CHANGE THE CODE ABOVE THIS LINE-->
 
-<%#= link_to 'Home Page', users_profile_path %>
+
+<nav class="navbar navbar-expand-md navbar-bottom text-center">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<div class="container-fluid d-flex justify-content-around">
+			<div class="row-md-4">
+				<%= link_to authenticated_root_path do %>
+							<i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
+							<h4>Profile</h4>
+				<% end %>
+			</div>
+			<div class="row-md-4">
+				<%= link_to timeline_index_path, method: :get do %>
+							<i class="fa fa-circle-o fa-5x" aria-hidden="true"></i>
+							<h4>Post</h4>
+				<% end %>
+			</div>
+			<div class="row-md-4">
+				<%= link_to social_index_path, method: :get do %>
+							<i class="fa fa-share-alt fa-5x" aria-hidden="true"></i>
+							<h4>Share</h4>
+						<% end %>
+			</div>
+		</div>
+	</div>  
+</nav>
+
+
+
+

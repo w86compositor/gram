@@ -1,6 +1,121 @@
-<h1>This is the Homepage</h1>
+<style>
 
-<%= link_to 'Sign Up', new_user_registration_path %> <br>
-<%= link_to 'Sign In', new_user_session_path %> <br>
-<%= link_to 'Log Out', destroy_user_session_path %>
+.hero {
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  color: #fefefe;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -moz-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  -o-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+
+}
+
+.hero h3 {
+
+  font-size: 6em;    
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+
+#bottom-home {
+  height: 220px;
+}
+
+#bottom-home a {
+  font-size: 4rem;
+  color: #fefefe;
+  
+}
+
+ .sameHeightImages img {
+  width: 100% !important;
+  height: 1470px;
+  max-height: 1470px;
+} 
+
+.overlay {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #080d15;
+  opacity: .6;
+}
+
+</style>
+
+<!-- Bootstrap Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active sameHeightImages">
+      <div class="overlay"></div>
+        <%= image_tag('girls-selfie.jpg', class: 'd-block w-100') %>
+        <div class="hero">
+          <h3>Welcome to <br> SnapBoogie</h3>
+          <p style="margin-top: 420px; font-size: 2rem; position: relative;">We are glad to see you here <br>browse through the slides <br> log in or sign up</p> 
+        </div>
+        
+    </div>
+    <div class="carousel-item sameHeightImages">
+      <div class="overlay"></div>
+      <%= image_tag('girl.jpg', class: 'd-block w-100') %>
+        <div class="hero">
+          <h3>Express Yourself</h3>
+        </div>
+    </div>
+    <div class="carousel-item sameHeightImages">
+      <div class="overlay"></div>
+      <%= image_tag("retro-selfie.jpg", class: 'd-block w-100') %>
+        <div class="hero">
+          <h3>Challenge your friends</h3>
+        </div>
+    </div>
+    <div class="carousel-item sameHeightImages">
+      <div class="overlay"></div>
+      <%= image_tag("headphones.jpg", class: 'd-block w-100')%>
+        <div class="hero">
+          <h3>Add your favorite music</h3>
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<nav id="bottom-home" class="navbar">
+  <div class="container align-middle">
+  <%= link_to('Log In', new_user_session_path, class: 'm-0') %>
+  <%= link_to('Sign Up', new_user_registration_path, class: 'm-0') %>
+  </div>
+  
+</nav>
+
+<script>
+  $('.carousel').carousel({
+    interval: false
+}); 
+</script>

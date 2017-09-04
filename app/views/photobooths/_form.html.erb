@@ -1,3 +1,9 @@
+<style>
+  body {
+    color: #fefefe;
+  }
+</style>
+
 <%= form_for @photobooth, url: photobooths_path, html: { multipart: true } do |f| %>
   <% if @photobooth.errors.any? %>
     <div id="error_explanation">
@@ -11,14 +17,14 @@
     </div>
   <% end %>
 
+<%= hidden_field_tag 'photobooth[image_challenge_type]', nil %>
 
+<div class="field image-input">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
 
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="actions footer-btn">
+  <%= f.submit %>
+</div>
 <% end %>

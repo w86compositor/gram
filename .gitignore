@@ -16,9 +16,11 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+.DS_Store
 /node_modules
 /yarn-error.log
+/.env
+.env
+.DS_Store
 /public/*
 .byebug_history
-.env
