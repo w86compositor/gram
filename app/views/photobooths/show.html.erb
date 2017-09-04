@@ -18,34 +18,31 @@
 	</div>
 </div>
 
-
-<div class="container-fluid mt-5 mb-5">
-	<div class="row text-center">
-		<div class="col-md-4">1</div>
-		<div class="col-md-4">2</div>
-		<div class="col-md-4">3</div>
-	</div>
-	<div class="row text-center">
-		<div class="col-md-4">4</div>
-		<div class="col-md-4">5</div>
-		<div class="col-md-4">6</div>
-	</div>
-</div>
-
 <!-- DO NOT CHANGE THE CODE BELOW, I REPEAT, DO NOT CHANGE THE CODE BELOW THIS LINE-->
 <% if @is_genres %>
-<audio controls>
-  <source src="<%= @genre[:url] %>" type="audio/mpeg">
-  Your browser does not support the audio tag.
-</audio>
-	<% if @genre_error.present? %>
-	<%=  @genre_error %>
-	<% end %>
-<% else %>
-	<% @genres.each do |g| %>
-		<%= link_to g, photobooth_path(@photobooth, genres: g) %>
-	<% end %>
-<% end %> <br>
+	<audio controls>
+  	<source src="<%= @genre[:url] %>" type="audio/mpeg">
+  	Your browser does not support the audio tag.
+	</audio>
+		<% if @genre_error.present? %>
+			<%=  @genre_error %>
+		<% end %>
+	<% else %>
+
+	<div class="container-fluid mt-5 mb-5">
+		<div class="row text-center">
+			<% @genres.each do |g| %>
+				<div class="col-md-4">
+					<%= link_to photobooth_path(@photobooth, genres: g[:name]) do %>
+						<%= image_tag(g[:image], style: 'height: 140px; width: 140px;') %>
+						<h4 class="mt-5"><%=  g[:name] %></h4>
+					<% end %>		
+				</div>
+			<% end %>
+		</div>
+	</div>
+<% end %>
+
 <!-- DO NOT CHANGE THE CODE ABOVE, I REPEAT, DO NOT CHANGE THE CODE ABOVE THIS LINE-->
 
 <%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |

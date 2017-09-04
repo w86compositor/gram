@@ -17,12 +17,14 @@
     </div>
   <% end %>
 
-<div class="field">
+<%= hidden_field_tag 'photobooth[image_challenge_type]', nil %>
+
+<div class="field image-input">
   <%= f.label :image %>
   <%= f.file_field :image %>
 </div>
 
-<div class="actions">
+<div class="actions footer-btn">
   <%= f.submit %>
 </div>
 <% end %>
