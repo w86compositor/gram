@@ -1,5 +1,69 @@
-<h1>New Photobooth</h1>
+<style>
 
-<%= render 'form' %>
+.board-photo {
+	position: absolute;
+	top: 50%;
+	left: 45.5%;
+}
 
-<%= link_to 'Back', photobooths_path %>
+</style>
+
+
+<nav class="navbar navbar-expand-lg justify-content-center">
+  <a class="navbar-brand" style="color: #fefefe; height: 120px; font-weight: bold; font-family: 'Indie Flower', cursive; font-size: 4.0rem;">Challenge  <i class="fa fa-trophy" aria-hidden="true" style="color: #fefefe"></i> Board</a>
+
+</nav>
+
+<div class="container-fluid">
+	<div class="card bg-dark text-white mb-4">
+	  <%= image_tag('cool-ride.png', class: 'card-img') %>
+	  <div class="card-img-overlay">
+	    <h1 class="card-title">Cool Ride Challenge</h1>
+	  </div>
+	 	<div class="board-photo">
+	    <i class="fa fa-camera fa-5x" aria-hidden="true", style="color: #fefefe;"></i>
+	  </div> 
+	</div>
+	<div class="card bg-dark text-white mb-4">
+	  <%= image_tag('party.png', class: 'card-img') %>
+	  <div class="card-img-overlay">
+	    <h1 class="card-title">Best Party Challenge</h1>
+	  </div>
+	  <div class="board-photo">
+	    <i class="fa fa-camera fa-5x" aria-hidden="true", style="color: #fefefe;"></i>
+	  </div>
+	</div>
+	<div class="card bg-dark text-white mb-4">
+	  <%= image_tag('stop.png', class: 'card-img') %>
+	  <div class="card-img-overlay">
+	    <h1 class="card-title">Do Not Stop Challenge</h1>
+	  </div>
+	  <div class="board-photo">
+	    <i class="fa fa-camera fa-5x"  aria-hidden="true", style="color: #fefefe;"></i>
+	  </div>
+	</div>
+</div>
+
+
+<div class="container-fluid text-center" style="height: 60px;">
+  <div class="row justify-content-around">
+  		<div class="col-md-4">
+			<%= link_to users_profile_path do %>
+				<i class="fa fa-arrow-circle-o-left fa-4x" aria-hidden="true" style="color: #fefefe"></i>
+				<h4 style="margin-top: .5em; color: #b4f5ff;">Back</h4>
+			<% end %>
+		</div>
+		<div class="col-md-4">
+			<%= link_to timeline_index_path do %>
+				<i class="fa fa-list-alt fa-4x" aria-hidden="true" style="color: #fefefe"></i>
+				<h4 style="margin-top: .5em; color: #ffb4b4;">Timeline</h4>
+			<% end %>
+		</div>
+		<div class="col-md-4">
+				<%= link_to destroy_user_session_path do %>
+				<i class="fa fa-sign-out fa-4x" aria-hidden="true" style="color: #fefefe"></i>
+				<h4 style="margin-top: .5em; color: #ffddb4;">Log Out</h4>
+				<% end %>
+		</div>
+  </div>
+</div>

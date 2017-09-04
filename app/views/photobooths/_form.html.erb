@@ -1,3 +1,9 @@
+<style>
+  body {
+    color: #fefefe;
+  }
+</style>
+
 <%= form_for @photobooth, url: photobooths_path, html: { multipart: true } do |f| %>
   <% if @photobooth.errors.any? %>
     <div id="error_explanation">
