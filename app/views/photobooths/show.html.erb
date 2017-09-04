@@ -1,10 +1,38 @@
-<p id="notice"><%= notice %></p>
+<style>
+	body {
+		color: #fefefe;
+	}
+</style>
 
-<h1>This is supposed to be the Music Genre Page</h1>
+<!-- <p id="notice"><%# notice %></p -->
 
-<%= image_tag @photobooth.image.url(:medium) %> <br>
+<div class="container-fluid mt-5">
+	<div class="row justify-content-center">
+		<%= image_tag @photobooth.image.url %>
+	</div>
+</div>
 
-<!-- Do not change this CODE, I repeat, DO NOT CHANGE THIS CODE -->
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<h1>Select the Music Genre</h1>	
+	</div>
+</div>
+
+
+<div class="container-fluid mt-5 mb-5">
+	<div class="row text-center">
+		<div class="col-md-4">1</div>
+		<div class="col-md-4">2</div>
+		<div class="col-md-4">3</div>
+	</div>
+	<div class="row text-center">
+		<div class="col-md-4">4</div>
+		<div class="col-md-4">5</div>
+		<div class="col-md-4">6</div>
+	</div>
+</div>
+
+<!-- DO NOT CHANGE THE CODE BELOW, I REPEAT, DO NOT CHANGE THE CODE BELOW THIS LINE-->
 <% if @is_genres %>
 <audio controls>
   <source src="<%= @genre[:url] %>" type="audio/mpeg">
@@ -18,14 +46,14 @@
 		<%= link_to g, photobooth_path(@photobooth, genres: g) %>
 	<% end %>
 <% end %> <br>
-
+<!-- DO NOT CHANGE THE CODE ABOVE, I REPEAT, DO NOT CHANGE THE CODE ABOVE THIS LINE-->
 
 <%= link_to 'Edit', edit_photobooth_path(@photobooth) %> |
 <%= link_to 'Back', photobooth_path(@photobooth) %> |
 <%= link_to 'Destroy', photobooth_path(@photobooth) %> |
-<%= link_to 'User Profile', authenticated_root_path %> <br>
-<%= button_to 'Post', timeline_index_path, method: :get%> <br>
-<%= button_to 'Social', social_index_path, method: :get%> <br>
+<%= link_to 'User Profile', authenticated_root_path %> |
+<%= button_to 'Post', timeline_index_path, method: :get%> |
+<%= button_to 'Social', social_index_path, method: :get%> |
 
 
 
