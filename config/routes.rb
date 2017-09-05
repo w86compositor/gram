@@ -13,7 +13,8 @@ get 'users/profile'
 resources :photobooths
 resources :musicgenres
 
-  get 'social/index'
+  resources :social
+  
   get 'timeline/index'
   get 'musicgenres/index'
 

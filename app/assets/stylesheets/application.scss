@@ -20,3 +20,47 @@ a {
 	width: 100%;
 	background-repeat: no-repeat;
 }
+
+.cloud {
+
+  background: url('background2.png');
+  background-repeat: no-repeat;
+  height: 1774px;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+
+  img {
+
+    height: auto;
+    width: 40%;
+    margin-top: 425px;
+  }
+
+  #user_email, #user_password, #user_password_confirmation {
+    width: 240px;
+    height: 40px;
+    border-radius: 7px;
+    padding-left: 16px;
+    // height: 240px;
+    background-color: #ffffff;
+  }
+
+  #user_email {
+    margin-top: 100px;
+  }
+}
+
+.sharing {
+
+  background: url('background3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 1774px;
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: white;
+  font-size: 150px;
+}

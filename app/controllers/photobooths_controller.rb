@@ -16,7 +16,7 @@ class PhotoboothsController < ApplicationController
           @genre = GENRES[params[:genres].to_sym].sample
       end
     end
-    @genres = [{name:"country", image: 'triangle.svg'},{name: "Latin", image: 'harmonica.svg'},{name:"hip-hop", image: 'keyboard.svg'},{name:"pop", image: 'drum-set.svg'},{name:"jazz", image: 'saxophone.svg'},{name:"rock", image: 'electric-guitar.svg'},{name:"classic", image: 'flute.svg'},{name:"contemporary", image: 'key-contemporary.svg'},{name:"electronic_dance", image: 'saxophone.svg'},{name:"rb", image: 'keyboard.svg'},{name:"soul", image: 'french-horn.svg'},{name:"indie", image: 'drum-set.svg'}]
+    @genres = [{name:"country", image: 'triangle.svg'},{name: "latin", image: 'harmonica.svg'},{name:"hip_hop", image: 'keyboard.svg'},{name:"pop", image: 'drum-set.svg'},{name:"jazz", image: 'saxophone.svg'},{name:"rock", image: 'electric-guitar.svg'},{name:"classic", image: 'flute.svg'},{name:"contemporary", image: 'key-contemporary.svg'},{name:"electronic_dance", image: 'saxophone.svg'},{name:"rb", image: 'keyboard.svg'},{name:"soul", image: 'french-horn.svg'},{name:"indie", image: 'drum-set.svg'}]
   end
 
   # GET /photobooths/new
