@@ -1,12 +1,62 @@
 <style>
 	body {
-		color: #fefefe;
+		color: #333;
 	}
 </style>
 
-<h1>This is the Timeline view</h1>
-<%= @all_pics %>
 
-<% @all_pics.each do |user| %>
-  <%# user.photobooths.last.image %>
+<div class="container-fluid mt-5 mb-5">
+	<h1 class="text-center" style="color: #fff;">SNAP BOOGIE TIMELINE</h1>	
+</div>
+
+
+<div class="card text-center" style="background-color: #fefefe;">
+  <div class="card-header">
+    <% @user.each do |u| %>
+    	<h3>Jeremy Foxtrot</h3>
+    <% end %>
+  </div>
+  <% @all_pics.each do |photo| %>
+	<div class="row d-flex justify-content-center">
+	  <%= image_tag photo.image.url, class: 'img-fluid' %>	
+	</div>
+  <div class="card-footer">
+	<ul class="nav d-flex justify-content-between" style="background-color: #ffddb4;">
+	  <li class="nav-item">
+	    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+	  </li>
+	  <li class="nav-item">
+	  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
+	  </li>
+	  <li class="nav-item">
+	    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
+	  </li>
+	</ul>
+  </div>
 <% end %>
+</div>
+
+<div class="container-fluid text-center" style="height: 60px;">
+  <div class="row justify-content-around mt-3">
+		<div class="col-md-6">
+			<%= link_to users_profile_path do %>
+				<i class="fa fa-user-o fa-5x" aria-hidden="true" style="color: #fefefe"></i>
+				<h4 style="margin-top: .5em; color: #ffb4b4;">Profile</h4>
+			<% end %>
+		</div>
+		<div class="col-md-6">
+				<%= link_to destroy_user_session_path do %>
+				<i class="fa fa-sign-out fa-5x" aria-hidden="true" style="color: #fefefe"></i>
+				<h4 style="margin-top: .5em; color: #ffddb4;">Log Out</h4>
+				<% end %>
+		</div>
+  </div>
+</div>
+
+
+
+
+
+
+  
+
