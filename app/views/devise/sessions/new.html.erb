@@ -1,27 +1,30 @@
 <style>
 
-#sign-up {
+#sign-in {
   position: relative;
   top: 50%;
   width: 650px;
   height: 350px;
-  background-color: #ffffff;
+  background-color: #fefefe;
 }
 
-#sign-up-email input {
+#sign-in-email input {
   height: 110px;
+  font-size: 2.8rem;
+  letter-spacing: .4rem;
 }
 
-#sign-up-password input {
+#sign-in-password input {
   height: 110px;
+  font-size: 2.8rem;
+  letter-spacing: .4rem;
 }
 
 
-#sign-up-button input {
+#sign-in-button input {
     width: 650px;
     height: 110px;
     background-color: #ba77ff;
-    font-family: Avenir;
     font-size: 46px;
     font-weight: 300;
     line-height: 50%;
@@ -30,16 +33,16 @@
 </style>
 
 <div class="girl">
-  <div class="container" id="sign-up">
+  <div class="container" id="sign-in">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group m-0 p-0" id="sign-up-email">
-         <%= f.email_field :email, autofocus: true, placeholder: raw("&#xf007") + " Username", style: "font-family: FontAwesome", class: 'form-control' %> 
+        <div class="form-group m-0 p-0" id="sign-in-email">
+         <%= f.email_field :email, autofocus: true, placeholder: "Username", style: "font-family: FontAwesome", class: 'form-control' %> 
         </div>
         
-        <div class="form-group m-0 p-0" id="sign-up-password">
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        <div class="form-group m-0 p-0" id="sign-in-password">
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: 'form-control' %>
         </div>
-        <div class="actions d-flex justify-content-center" id="sign-up-button">
+        <div class="actions d-flex justify-content-center" id="sign-in-button">
           <%= f.submit "Sign in", class: 'btn btn-primary' %>
         </div>
   <% end %>
