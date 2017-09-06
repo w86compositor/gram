@@ -5,6 +5,7 @@ class PhotoboothsController < ApplicationController
   # GET /photobooths.json
   def index
     @photobooths = Photobooth.all
+    @users = User.all
   end
 
   # GET /photobooths/1

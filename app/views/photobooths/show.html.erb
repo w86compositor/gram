@@ -2,6 +2,15 @@
 	body {
 		color: #fefefe;
 	}
+
+[controls] {
+height: 120px;
+width:100%;
+margin-top:1.25em;
+margin-bottom:1.25em;
+
+}
+
 </style>
 
 <!-- <p id="notice"><%# notice %></p -->
@@ -19,15 +28,18 @@
 </div>
 
 <!-- DO NOT CHANGE THE CODE BELOW, I REPEAT, DO NOT CHANGE THE CODE BELOW THIS LINE-->
-<% if @is_genres %>
+<div class="container d-flex flex-column justify-content-center">
+	<% if @is_genres %>
 	<audio controls>
-  	<source src="<%= @genre[:url] %>" type="audio/mpeg">
-  	Your browser does not support the audio tag.
+		<source src="<%= @genre[:url] %>" type="audio/ogg">
+		<source src="<%= @genre[:url] %>" type="audio/mpeg">
+		Your browser does not support the audio tag.
 	</audio>
 		<% if @genre_error.present? %>
 			<%=  @genre_error %>
 		<% end %>
 	<% else %>
+</div>
 
 	<div class="container-fluid mt-5 mb-5">
 		<div class="row text-center">
@@ -46,7 +58,7 @@
 <!-- DO NOT CHANGE THE CODE ABOVE, I REPEAT, DO NOT CHANGE THE CODE ABOVE THIS LINE-->
 
 
-<nav class="navbar navbar-expand-md navbar-bottom text-center">
+<nav class="navbar navbar-expand-md fixed-bottom text-center">
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>

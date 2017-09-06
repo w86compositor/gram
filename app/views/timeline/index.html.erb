@@ -1,62 +1,129 @@
 <style>
 	body {
-		color: #333;
+		color: #fefefe;
+		background-color: #333333;
 	}
+
+
+#timeline-cont {
+	margin: 3.8rem 0 3.8rem 0 !important;
+	padding: 0 !important;
+	width: 1332px !important;
+}
+
+#timeline-cont h1 {
+	font-size: 4rem;
+}
+
+li {
+	margin: 1.2rem;
+}
+
 </style>
 
 
-<div class="container-fluid mt-5 mb-5">
-	<h1 class="text-center" style="color: #fff;">SNAP BOOGIE TIMELINE</h1>	
+<div id="timeline-cont">
+	<h1 class="text-center" style="color: #fff; font-size: 4.6rem; font-family: 'Indie Flower', cursive;
+">SNAP BOOGIE TIMELINE</h1>	
+</div>
+
+<div class="text-center" id="timeline-cont">
+ 	<h1><%= current_user.name  %>&nbsp<%= current_user.lastname  %></h1> 
+</div>
+
+	<%= image_tag @all_pics.image.url, style: 'width: 1332px;'  %>
+
+
+<ul class="nav d-flex justify-content-start" style="margin-top: 5rem;">
+  <li class="nav-item">
+    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
+  </li>
+</ul>
+
+<div class="text-center" id="timeline-cont">
+    <h1>Bill Gates</h1>
 </div>
 
 
-<div class="card text-center" style="background-color: #fefefe;">
-  <div class="card-header">
-    <% @user.each do |u| %>
-    	<h3>Jeremy Foxtrot</h3>
-    <% end %>
-  </div>
-  <% @all_pics.each do |photo| %>
-	<div class="row d-flex justify-content-center">
-	  <%= image_tag photo.image.url, class: 'img-fluid' %>	
-	</div>
-  <div class="card-footer">
-	<ul class="nav d-flex justify-content-between" style="background-color: #ffddb4;">
-	  <li class="nav-item">
-	    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
-	  </li>
-	  <li class="nav-item">
-	  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
-	  </li>
-	  <li class="nav-item">
-	    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
-	  </li>
-	</ul>
-  </div>
-<% end %>
-</div>
+		<%= image_tag('billgates-iced.jpg', style: 'width: 1332px;') %>
 
-<div class="container-fluid text-center" style="height: 60px;">
+
+<ul class="nav d-flex justify-content-start" style="margin-top: 5rem;">
+  <li class="nav-item">
+    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
+  </li>
+</ul>
+	
+
+
+<div class="text-center" id="timeline-cont">
+    <h1>Jimmy Fallon</h1>
+</div>
+		<%= image_tag('ice-bucket-challenge.jpg', style: 'width: 1332px;') %>
+
+
+
+
+<ul class="nav d-flex justify-content-start" style="margin-top: 5rem;">
+  <li class="nav-item">
+    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
+  </li>
+</ul>
+  
+
+
+
+<div class="text-center" id="timeline-cont"> 
+    <h1>Kristof Today</h1>
+</div> 
+
+		<%= image_tag('kirstoftodayiced.jpg', style: 'width: 1332px;') %>
+
+
+<ul class="nav d-flex justify-content-start" style="margin-top: 5rem;">
+  <li class="nav-item">
+    <i class="fa fa-star fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+  	<i class="fa fa-share fa-5x" aria-hidden="true"></i>
+  </li>
+  <li class="nav-item">
+    <i class="fa fa-volume-off fa-5x" aria-hidden="true"></i>
+  </li>
+</ul>
+
+
+<div class="text-center" id="timeline-cont" style="height: 60px;">
   <div class="row justify-content-around mt-3">
 		<div class="col-md-6">
 			<%= link_to users_profile_path do %>
-				<i class="fa fa-user-o fa-5x" aria-hidden="true" style="color: #fefefe"></i>
-				<h4 style="margin-top: .5em; color: #ffb4b4;">Profile</h4>
+				<i class="fa fa-user-o fa-5x" aria-hidden="true"></i>
+				<h1 style="margin-top: .5em; color: #ffb4b4;">Profile</h1>
 			<% end %>
 		</div>
 		<div class="col-md-6">
 				<%= link_to destroy_user_session_path do %>
-				<i class="fa fa-sign-out fa-5x" aria-hidden="true" style="color: #fefefe"></i>
-				<h4 style="margin-top: .5em; color: #ffddb4;">Log Out</h4>
+				<i class="fa fa-sign-out fa-5x" aria-hidden="true"></i>
+				<h1 style="margin-top: .5em; color: #ffddb4;">Log Out</h1>
 				<% end %>
 		</div>
   </div>
 </div>
-
-
-
-
-
-
-  
-
